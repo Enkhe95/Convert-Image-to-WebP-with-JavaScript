@@ -19,7 +19,9 @@ function convertImage(event) {
       canvas.height = userImage.height;
       ctx.drawImage(userImage, 0, 0);
 
-      document.body.appendChild(canvas);
+      //convert canvas to webp
+      let webpImage = canvas.toDataURL("image/webp", 1);
+      WebpImage.src = webpImage;
     };
   }
 }
