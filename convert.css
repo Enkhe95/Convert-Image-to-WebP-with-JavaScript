@@ -34,3 +34,19 @@ body {
   margin-top: 38px;
   font-size: 20px;
 }
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+.images div {
+  width: 400px;
+}
+
+img {
+  width: 100%;
+}
