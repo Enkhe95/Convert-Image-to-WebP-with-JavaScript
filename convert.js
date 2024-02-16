@@ -6,5 +6,20 @@ function convertImage(event) {
     //show User image
     let src = URL.createObjectURL(event.target.files[0]);
     UserImage.src = src;
+
+    //Convert User Image to Canvas
+    let canvas = document.createElement("canvas");
+    let ctx = canvas.getContext("2d");
+
+    let userImage = new Image();
+    userImage.src = src;
+
+    userImage.onload = function () {
+      canvas.width = userImage.width;
+      canvas.height = userImage.height;
+      ctx.drawImage(userImage, 0, 0);
+
+      document.body.appendChild(canvas);
+    };
   }
 }
