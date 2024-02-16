@@ -9,11 +9,25 @@
   <body>
     <div class="convert">
       <h1>Convert image to Webp format</h1>
-      <input type="file" accept="image/*" name="convert" id="userImage" />
+      <input
+        type="file"
+        accept="image/*"
+        name="convert"
+        id="userImage"
+        onchange="convertImage(event)"
+      />
     </div>
     <div class="mask">
       <h4>Upload an Image</h4>
     </div>
-    <div class="images"></div>
+    <div class="images">
+      <div>
+        <img src="" id="UserImage" />
+      </div>
+      <div>
+        <img src="" id="WebpImage" />
+      </div>
+    </div>
+    <script src="convert.js"></script>
   </body>
 </html>
